@@ -2,7 +2,9 @@
 
 Copyright (C) 2020-2021  
 Benjamin Paaßen  
-The University of Sydney
+The University of Sydney  
+Daniele Grattarola, Daniele Zambon  
+Università della Svizzera italiana
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
