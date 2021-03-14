@@ -28,6 +28,18 @@ as described in the paper
   Graph Edit Networks. Proceedings of the Ninth International Conference on
   Learning Representations (ICLR 2021). [Link][Paa2021]
 
+```
+@inproceedings{Paassen2021ICLR,
+    title={Graph Edit Networks},
+    author={Benjamin Paaßen and Daniele Grattarola and Daniele Zambon and Cesare Alippi and Barbara Hammer},
+    booktitle={Proceedings of the Ninth International Conference on Learning Representations (ICLR 2021)},
+    editor={Shakir Mohamed and Katja Hofmann and Alice Oh and Naila Murray and Ivan Titov},
+    venue={virtual},
+    year={2021},
+    url={https://openreview.net/forum?id=dlEJsyHGeaL}
+}
+```
+
 In particular, this repository contains all experimental scripts, model
 implementations, datasets, and auxiliary files necessary to run the
 experiments.
