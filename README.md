@@ -1,6 +1,6 @@
 # Graph Edit Networks
 
-Copyright (C) 2020-2021  
+Copyright (C) 2020-2022  
 Benjamin Paaßen  
 The University of Sydney  
 Daniele Grattarola, Daniele Zambon  
@@ -56,6 +56,7 @@ graph edit networks, you additionally require [PyTorch][pytorch]
 (Version >= 1.4.0; torchvision or cuda are not required). To train tree edit
 networks, you additionally require [edist][edist] (Version >= 1.1.0), which
 in turn requires [numpy][numpy] (Version >= 1.17).
+To run the VGRNN baseline, you require [torch_geometric][torch_geometric].
 
 To run the kernel time series prediction ([Paaßen et al., 2018][Paa2018])
 baseline, you require [edist][edist] (Version >= 1.1.0) and
@@ -231,7 +232,7 @@ notebooks with the expected results in each case.
 
 `graph_dynamical_systems.ipynb` contains the experiments on the three graph
 dynamical systems (edit cycles, degree rules, and game of life). The results
-should be as follows.
+should be roughly as follows.
 
 <pre>
 --- data set edit_cycles ---
@@ -422,6 +423,7 @@ In more detail, the following files are contained in this repository (in
 alphabetical order):
 
 * `baseline_models.py` : An implementation of [variational graph autoencoders (VGAE; Kipf and Welling, 2016)][Kipf2016]
+  and [variational graph recurrent networks (VGRNN; Hajiramezanali et al., 2019)][Hajiramezanali2019]
   for time series prediction.
 * `boolean_formulae.py` : A Python script generating the Boolean dataset and
   its teaching protocol.
@@ -479,8 +481,14 @@ alphabetical order):
   Pattern Recognition Letters, 87, 38-46.
   doi:[10.1016/j.patrec.2016.10.001](https://doi.org/10.1016/j.patrec.2016.10.001).
   [Link][Bou2017]
-* Kipf, and Welling (2016). Variational Graph Auto-Encoders. Proceedings of the
-  NIPS 2016 Workshop on Bayesian Deep Learning. [Link][Kipf2016]
+* Hajiramezanali, Hasanzadeh, Narayanan, Duffield, Zhou, and
+  Qian (2019). Variational graph recurrent neural networks.
+  Proceedings of the 32nd International Conference on Advances
+  in Neural Information Processing Systems (NeurIPS 2019),
+  pp. 10700–10710. [Link][Hajiramezanali2019]
+* Kipf, and Welling (2016). Variational Graph Auto-Encoders. 
+  Proceedings of the NIPS 2016 Workshop on Bayesian Deep Learning
+  [Link][Kipf2016]
 * Paaßen, Göpfert, and Hammer (2018). Time Series Prediction for Graphs in
   Kernel and Dissimilarity Spaces. Neural Processing Letters, 48, 669-689.
   doi:[10.1007/s11063-017-9684-5](https://doi.org/10.1007/s11063-017-9684-5).
@@ -495,6 +503,7 @@ alphabetical order):
 [sklearn]:https://scikit-learn.org/stable/ "scikit-learn homepage"
 [Bou2017]:https://bougleux.users.greyc.fr/articles/ged-prl.pdf "Bougleux, Brun, Carletti, Foggia, Gaüzère, and Vento (2017). Graph edit distance as a quadratic assignment problem. Pattern Recognition Letters, 87, 38-46. doi:10.1016/j.patrec.2016.10.001."
 [Kipf2016]:http://bayesiandeeplearning.org/2016/papers/BDL_16.pdf "Kipf, and Welling (2016). Variational Graph Auto-Encoders. Proceedings of the NIPS 2016 Workshop on Bayesian Deep Learning."
+[Hajiramezanali2019]:http://papers.nips.cc/paper/9254-variational-graph-recurrent-neural-networks "Hajiramezanali, Hasanzadeh, Narayanan, Duffield, Zhou, and Qian (2019). Variational graph recurrent neural networks. Proceedings of the 32nd International Conference on Advances in Neural Information Processing Systems (NeurIPS 2019), pp. 10700–10710"
 [Paa2018]:https://arxiv.org/abs/1704.06498 "Paaßen, Göpfert, and Hammer (2018). Time Series Prediction for Graphs in Kernel and Dissimilarity Spaces. Neural Processing Letters, 48, 669-689. doi:10.1007/s11063-017-9684-5."
 [Paa2021]:https://openreview.net/forum?id=dlEJsyHGeaL "Paaßen, B., Grattarola, D., Zambon, D., Alippi, C., and Hammer, B. (2021). Graph Edit Networks. Proceedings of the Ninth International Conference on Learning Representations (ICLR 2021)"
 [Zhang1989]:https://doi.org/10.1137/0218082 "Zhang, and Shasha (1989). Simple Fast Algorithms for the Editing Distance between Trees and Related Problems. SIAM Journal on Computing, 18(6), 1245-1262. doi:10.1137/0218082"
